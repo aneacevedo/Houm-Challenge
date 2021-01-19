@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+@font-face {
+    font-family: 'Sf Black';
+    src: url('../../Fonts/sf-ui-black.otf');
+}
+@font-face {
+    font-family: 'Sf Bold';
+    src: url('../../Fonts/sf-ui-bold.otf');
+}
+@font-face {
+    font-family: 'Sf Light';
+    src: url('../../Fonts/sf-ui-light.otf');
+}
+@font-face {
+    font-family: 'Sf Medium';
+    src: url('../../Fonts/sf-ui-medium.otf');
+}
+@font-face {
+    font-family: 'Sf Semibold';
+    src: url('../../Fonts/sf-ui-semibold.otf')
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+.headerContainer{
+    height: 6vh;
+    width: 100%;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    justify-content: center;
+    padding: 2%;
+    flex-direction: column;
+    /* align-items: center; */
+    /* background-color: aquamarine; */
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    backdrop-filter: blur(10px);
+}
+.title-cont{
+    display: flex;
+    justify-content: center;
+}
+.title{
+    font-size: 1.8rem;
+    color: #303030;
+}

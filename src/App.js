@@ -1,12 +1,19 @@
 import React from 'react';
-import './App.css';
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import Pokemon from './Page/Pokemon.js';
 
-function App() {
-  return (
-    <div className="App">
-      <h1>Wola</h1>
-    </div>
+export const App = () => {
+  return(
+  <div className='App'>
+    <Router>
+  <Switch>
+    <Route exact path="/">
+      <Pokemon/>
+    </Route>
+  </Switch>
+  </Router>
+  </div>
   );
-}
+};
 
 export default App;
