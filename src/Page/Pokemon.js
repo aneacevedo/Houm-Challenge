@@ -5,7 +5,7 @@ import Card from '../Components/Cards/Card';
 export const Pokemon = () => {
     return(
         <div>
-        <Header/>
+        {/* <Header/> */}
         <Card/>
         </div>
     );
