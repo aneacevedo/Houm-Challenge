@@ -5,7 +5,7 @@ import { useState, useEffect } from 'react';
 
 export const Card = () => {
     const [pokemonData, setPokemonData] = useState([]);
-    // const [pokemonType, setPokemonType] = useState('');
+    const [pokemon, setPokemonDetail] = useState('');
 
 
     useEffect(() => {
@@ -21,7 +21,7 @@ export const Card = () => {
         // console.log(pokemons.results);
         setPokemonData(pokemons.results)
     }
-    //console.log(pokemonData)
+    // console.log(pokeData)
     // console.log(pokemons)
 
     

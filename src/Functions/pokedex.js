@@ -8,6 +8,18 @@ export const searchPokemon = async (pokemon) => {
     }
 };
 export default searchPokemon;
+
+
+// export const getPokemons = async () => {
+//     try {
+//     //   let url = 'https://pokeapi.co/api/v2/pokemon?offset=0';
+//       const response = await fetch('https://pokeapi.co/api/v2/pokemon/ditto');
+//       const data = response.json();
+//       console.log(response);
+//       return data;
+//     } catch (err) {}
+//   };
+
 // export async function getAllPokemons({ url }) {
 //     return new Promise((resolve, reject) => {
 //         fetch(url).then(res => res.json())
