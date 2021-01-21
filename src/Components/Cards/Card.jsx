@@ -1,18 +1,45 @@
 import React from 'react';
 import './Card.css'
+import { useState, useEffect } from 'react';
+// import axios from 'axios';
 
-export const Card = ({ pokemon }) => {
+export const Card = () => {
+    const [pokemonData, setPokemonData] = useState([]);
+    // const [pokemonType, setPokemonType] = useState('');
 
+
+    useEffect(() => {
+        // console.log('useEffect')
+        pokeData()
+
+    }, [])
+
+    const pokeData = async () => {
+        const data = await fetch('https://pokeapi.co/api/v2/pokemon?offset=0')
+        const pokemons = await data.json();
+        
+        // console.log(pokemons.results);
+        setPokemonData(pokemons.results)
+    }
+    //console.log(pokemonData)
+    // console.log(pokemons)
+
+    
     return(
         <div className='bgPage'>
         <div className='containerBg'>
         <div className='cardBox'>
-            {/* <img className='pokeImg' src={pokemon.sprites.front_default} alt=""/> */}
+            <img className='pokeImg'/>
             <div className='dataBox'>
-           <h2>{pokemon.name}</h2>
-                <p>{pokemon.id}</p>
-                {/* <p>{types.type.name}</p> */}
-                <p>{pokemon.weight}</p>
+                {pokemonData.map((pokemon, item) => 
+                        <h2 className='pokeName' key={item}>{pokemon.name}</h2>
+                    
+                        
+                    )
+                }
+                <p></p>
+                <p>Type</p>
+                <p>weight</p>
             </div>
         </div>
         </div>
