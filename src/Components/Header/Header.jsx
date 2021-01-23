@@ -7,11 +7,6 @@ export const Header = () => {
             <div className='title-cont'>
             <h1 className='title'>POKÈDEX</h1>
             </div>
-            <div>
-                <select></select>
-                <select></select>
-                <select></select>
-            </div>
         </div>
     );
 };

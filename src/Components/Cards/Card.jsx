@@ -1,49 +1,43 @@
 import React from 'react';
 import './Card.css'
-import { useState, useEffect } from 'react';
-// import axios from 'axios';
+import typeColors from '../Colors/typeColors'
 
-export const Card = () => {
-    const [pokemonData, setPokemonData] = useState([]);
-    const [pokemon, setPokemonDetail] = useState('');
-
-
-    useEffect(() => {
-        // console.log('useEffect')
-        pokeData()
-
-    }, [])
-
-    const pokeData = async () => {
-        const data = await fetch('https://pokeapi.co/api/v2/pokemon?offset=0')
-        const pokemons = await data.json();
-        
-        // console.log(pokemons.results);
-        setPokemonData(pokemons.results)
-    }
-    // console.log(pokeData)
-    // console.log(pokemons)
-
-    
-    return(
-        <div className='bgPage'>
-        <div className='containerBg'>
-        <div className='cardBox'>
-            <img className='pokeImg'/>
-            <div className='dataBox'>
-                {pokemonData.map((pokemon, item) => 
-                        <h2 className='pokeName' key={item}>{pokemon.name}</h2>
-                    
-                        
-                    )
-                }
-                <p></p>
-                <p>Type</p>
-                <p>weight</p>
+function Card({ pokemon }) {
+    return (
+        <div className="Card">
+            <div className="CardImg">
+                <img src={pokemon.sprites.front_default} alt="" />
             </div>
+        <div className="CardName">
+        {pokemon.name}
         </div>
-        </div>
-        </div>
-    );
+        <div className="CardTypes">
+                {
+                pokemon.types.map(type => {
+                    return (
+                         <div className="CardType" style={{ backgroundColor: typeColors[type.type.name] }}>
+                                {type.type.name}
+                            </div>
+                    )
+                        })
+                    }
+                </div>
+                <div className="CardInfo">
+                    <div className="CardWeight">
+                        <p className="title">Peso:</p>
+                        <p>{pokemon.weight}</p>
+                    </div>
+                    <div className="CardHeight">
+                        <p className="title">Altura:</p>
+                        <p>{pokemon.height}</p>
+                    </div>
+                    <div className="CardAbility">
+                        <p className="title">Habilidad</p>
+                        <p>{pokemon.abilities[0].ability.name}</p>
+                    </div>
+                </div>
+            </div>
+        );
     }
-export default Card;
+    
+export default Card

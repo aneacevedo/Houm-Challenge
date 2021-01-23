@@ -1,45 +1,78 @@
 import React, { useState, useEffect } from 'react';
 import Header from '../Components/Header/Header';
 import Card from '../Components/Cards/Card';
-import SearchBar from '../Components/SearchBar/SearchBar';
-import ShowPokedex from '../Components/Results/ShowPokedex';
-import getPokemons from '../Functions/pokedex';
+import { getPokemon, getAllPokemon } from '../Functions/pokedex';
 
 
-export const Pokemon = () => {
-    const [pokemons, setPokemons] = useState([]);
+function PokeApp() {
+  const [pokemonData, setPokemonData] = useState([])
+  const [nextUrl, setNextUrl] = useState('');
+  const [prevUrl, setPrevUrl] = useState('');
+  const [loading, setLoading] = useState(true);
+  const initialURL = 'https://pokeapi.co/api/v2/pokemon'
 
-    const getPokemons = async (limit = 25, offset = 0) => {
-        try {
-          let url = `https://pokeapi.co/api/v2/pokemon?limit=${limit}&offset=${offset}`;
-          const response = await fetch(url);
-          const data = await response.json();
-        //   console.log(data);
-          return data;
-        } catch (err) {}
-      };
-
-    const fetchPokemons = async () => {
-        try{
-            const data = await getPokemons();
-            // console.log(data);
-            setPokemons(data.results);
-        }
-        catch(err){}
+  useEffect(() => {
+    async function fetchData() {
+      let response = await getAllPokemon(initialURL)
+      setNextUrl(response.next);
+      setPrevUrl(response.previous);
+      await loadPokemon(response.results);
+      setLoading(false);
     }
+    fetchData();
+  }, [])
 
-    useEffect(() => {
-        fetchPokemons();
-    },[])
+  const next = async () => {
+    setLoading(true);
+    let data = await getAllPokemon(nextUrl);
+    await loadPokemon(data.results);
+    setNextUrl(data.next);
+    setPrevUrl(data.previous);
+    setLoading(false);
+  }
 
-    return(
-        <div>
-        <Header/>
-        <SearchBar/>
-        <ShowPokedex pokemons={pokemons}/>
-        <Card/> 
-        </div>
-    );
-};
+  const prev = async () => {
+    if (!prevUrl) return;
+    setLoading(true);
+    let data = await getAllPokemon(prevUrl);
+    await loadPokemon(data.results);
+    setNextUrl(data.next);
+    setPrevUrl(data.previous);
+    setLoading(false);
+  }
 
-export default Pokemon;
+  const loadPokemon = async (data) => {
+    let _pokemonData = await Promise.all(data.map(async pokemon => {
+      let pokemonRecord = await getPokemon(pokemon)
+      return pokemonRecord
+    }))
+    setPokemonData(_pokemonData);
+  }
+
+  return (
+    <>
+      <Header />
+      <div>
+        {loading ? <h1 style={{ textAlign: 'center' }}>Cargando Pokémons...</h1> : (
+          <>
+            <div className="btn">
+              <button onClick={prev}>Anterior</button>
+              <button onClick={next}>Siguiente</button>
+            </div>
+            <div className="grid-container">
+              {pokemonData.map((pokemon, index) => {
+                return <Card key={index} pokemon={pokemon} />
+              })}
+            </div>
+            <div className="btn">
+              <button onClick={prev}>Anterior</button>
+              <button onClick={next}>Siguiente</button>
+            </div>
+          </>
+        )}
+      </div>
+    </>
+  );
+}
+
+export default PokeApp;
