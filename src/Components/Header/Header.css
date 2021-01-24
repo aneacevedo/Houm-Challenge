@@ -50,5 +50,14 @@
 }
 .Logo{
     width: 12%;
+    height: 100%;
     padding: 2px;
+}
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .Logo{
+        width: 22%;
+        height: 100%;
+        padding: 2px;
+    }
 }

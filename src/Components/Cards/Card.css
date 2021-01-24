@@ -22,21 +22,18 @@
     margin: 0;
     padding: 0;
 }
-.BgPage{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-}
-/* .ContainerBg{
-    display: flex;
+/* .BgPage{
+   width: 25vw;
+} */
+.Container-Bg{
+    /* display: flex; */
     /* justify-content: center; */
-    /* background-color: #FFFFFF; */
-    /* margin: 0% 10% 0% 10%; */
-    /* width: 90%; */
+    background-color: #FFFFFF;
+    width: 200px;
     /* flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between;
-} */
+    justify-content: space-between; */
+}
 
 .Cards{
     display: flex;
@@ -45,7 +42,7 @@
     justify-content: space-between;
 }
 .CardBox{
-    width: 15vw;
+    /* width: 35vw; */
     height: auto;
     /* border: 0.2px solid #FF4D21; */
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -61,11 +58,20 @@
     background-color: #FFFFFF;
     margin-bottom: 10%;
 }
+.CardInfo{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+.DataAnswer{
+    font-family: 'Sf Medium';
+    font-size: 1rem;
+}
 
 .CardName{
     color: #FF4D21;
     text-transform: capitalize;
-    display: flex;
+    text-shadow: #9B9B9B 0.5px 1.5px 3px;
 }
 
 .CardTypes{
@@ -91,16 +97,15 @@
     font-family: 'Sf Medium';
     font-size: 1rem;
     color: #303030;
-    display: flex;
 }
 .titles{
     font-family: 'Sf Semibold';
     font-size: 1.2rem;
-    color: #303030;
-    display: flex;
+    color:#FF4D21;
+    margin-top: 5%;
 }
 
 .CardAbility{
     text-transform: capitalize;
-    display: flex;
+    font-size: 1rem;
 }

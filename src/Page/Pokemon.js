@@ -54,14 +54,14 @@ function PokeApp() {
     <>
       <div className='ContainerBg'>
         {loading ? <h1 
-        style={{ textAlign: 'center' }}
+        // style={{ textAlign: 'center' }}
         >Cargando Pokémons...</h1> : (
           <>
             {/* <div className='btn'>
               <button className='Btns' onClick={prev}>Anterior</button>
               <button className='Btns' onClick={next}>Siguiente</button>
             </div> */}
-            <div className='grid-container'>
+            <div className='MyContainer'>
               {pokemonData.map((pokemon, index) => {
                 return <Card key={index} pokemon={pokemon} />
               })}

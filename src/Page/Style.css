@@ -10,7 +10,7 @@
     /* margin-top: 5%; */
     width: 100%;
 }
-.grid-container{
+.MyContainer{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -19,7 +19,7 @@
     height: auto;
     align-items: center;
     /* margin-top: 5%; */
-    padding: 8% 0% 5% 0%;
+    padding: 8% 8% 5% 8%;
     /* background-image: linear-gradient(to bottom, #ff4d21, #ff754f, #ff997b, #ffbaa6, #ffdbd2); */
 }
 .btn{
@@ -42,7 +42,7 @@
 }
 .Btns{
     background-color: #ff4d21;
-    border: 1.5px #000000 solid;
+    border: 2px #303030 solid;
     border-radius: 5px;
     color: #FFFFFF;
     padding: 5px;
@@ -54,4 +54,19 @@
 .Btns:hover{
     background-color: #ffdbd2;
     color:  #ff4d21;
+    cursor: pointer;
+}
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .MyContainer{
+        padding: 30% 8% 5% 8%;
+    }
+
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    .MyContainer{
+        padding: 12% 8% 5% 8%;
+    }
 }

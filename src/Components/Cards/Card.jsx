@@ -5,7 +5,7 @@ import typeColors from '../Colors/typeColors'
 function Card({ pokemon }) {
     return (
         <div className='BgPage'>
-        {/* <div className='ContainerBg'> */}
+        <div className='Container-Bg'>
         <div className='CardBox'>
             <div className='CardImg'>
                 <img src={pokemon.sprites.front_default} alt={pokemon.name} />
@@ -29,19 +29,19 @@ function Card({ pokemon }) {
                 <div className='CardInfo'>
                     <div className='CardWeight'>
                         <p className='titles'>Peso:</p>
-                        <p>{pokemon.weight}</p>
+                        <p className='DataAnswer'>{pokemon.weight}</p>
                     </div>
                     <div className='CardHeight'>
                         <p className='titles'>Altura:</p>
-                        <p>{pokemon.height}</p>
+                        <p className='DataAnswer'>{pokemon.height}</p>
                     </div>
                     <div className='CardAbility'>
                         <p className='titles'>Habilidad:</p>
-                        <p>"{pokemon.abilities[0].ability.name}"</p>
+                        <p className='DataAnswer'>"{pokemon.abilities[0].ability.name}"</p>
                     </div>
                 </div>
             </div>
-            {/* </div> */}
+            </div>
             </div>
         );
     }
