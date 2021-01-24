@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import Header from '../Components/Header/Header';
+// import Header from '../Components/Header/Header';
 import Card from '../Components/Cards/Card';
 import { getPokemon, getAllPokemon } from '../Functions/pokedex';
 import './Style.css';
@@ -52,22 +52,23 @@ function PokeApp() {
 
   return (
     <>
-      <Header />
-      <div>
-        {loading ? <h1 style={{ textAlign: 'center' }}>Cargando Pokémons...</h1> : (
+      <div className='ContainerBg'>
+        {loading ? <h1 
+        style={{ textAlign: 'center' }}
+        >Cargando Pokémons...</h1> : (
           <>
-            <div className="btn">
-              <button onClick={prev}>Anterior</button>
-              <button onClick={next}>Siguiente</button>
-            </div>
-            <div className="grid-container">
+            {/* <div className='btn'>
+              <button className='Btns' onClick={prev}>Anterior</button>
+              <button className='Btns' onClick={next}>Siguiente</button>
+            </div> */}
+            <div className='grid-container'>
               {pokemonData.map((pokemon, index) => {
                 return <Card key={index} pokemon={pokemon} />
               })}
             </div>
-            <div className="btn">
-              <button onClick={prev}>Anterior</button>
-              <button onClick={next}>Siguiente</button>
+            <div className='btn2'>
+              <button className='Btns' onClick={prev}>Anterior</button>
+              <button className='Btns' onClick={next}>Siguiente</button>
             </div>
           </>
         )}

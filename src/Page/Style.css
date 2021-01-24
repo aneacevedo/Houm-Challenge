@@ -2,3 +2,56 @@
     margin: 0px;
     padding: 0px;
 }
+
+.ContainerBg{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    /* margin-top: 5%; */
+    width: 100%;
+}
+.grid-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: 100%;
+    height: auto;
+    align-items: center;
+    /* margin-top: 5%; */
+    padding: 8% 0% 5% 0%;
+    /* background-image: linear-gradient(to bottom, #ff4d21, #ff754f, #ff997b, #ffbaa6, #ffdbd2); */
+}
+.btn{
+    /* z-index: 2; */
+    /* width: 15vw; */
+    margin: 4.5% 0% 1% 0%;
+    color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+}
+.btn2{
+    /* z-index: 2; */
+    width: 100vw;
+    /* margin: 4.5% 0% 2% 0%; */
+    color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    /* background-color: #ffdbd2; */
+    padding-bottom: 2%;
+}
+.Btns{
+    background-color: #ff4d21;
+    border: 1.5px #000000 solid;
+    border-radius: 5px;
+    color: #FFFFFF;
+    padding: 5px;
+    font-family: 'Sf Medium';
+    margin: 0% 2% 0% 0%;
+    display: flex;
+    justify-content: center;
+}
+.Btns:hover{
+    background-color: #ffdbd2;
+    color:  #ff4d21;
+}
