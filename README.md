@@ -16,7 +16,7 @@
 ## 1. Pokédex Houm :speech_balloon:
 
 
-Houm me entregó del desafío de desarrollar una pokédex a gtravés del consumo de PokeApi.
+Houm me entregó del desafío de desarrollar una pokédex a través del consumo de PokeApi.
 El proyecto muestra todos los pokémons alojados en la data de la Api con sus respectivas imágenes, nombres, tipo, peso, altura y habilidad.
 La Pokédex es repsonsiva.
 Puedes conocerla y probarla [aquí](https://aneacevedo.github.io/Houm-Challenge/).
