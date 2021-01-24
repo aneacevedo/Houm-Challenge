@@ -18,13 +18,13 @@
 
 Houm me entregó del desafío de desarrollar una pokédex a través del consumo de PokeApi.
 El proyecto muestra todos los pokémons alojados en la data de la Api con sus respectivas imágenes, nombres, tipo, peso, altura y habilidad.
-La Pokédex es repsonsiva.
+La Pokédex es responsiva.
 Puedes conocerla y probarla [aquí](https://aneacevedo.github.io/Houm-Challenge/).
 
 ## 2. Comenzando a usarla 🚀
 
 Accede a Pokédex Houm por medio de tu navegador y se desplegarán en varias páginas los pokémons con sus fichas en HeroCards.
-Puedes verlos todos avanzando por medio de los botones de página ubicados al pie.
+Puedes verlos todos avanzando por medio de los botones ubicados al pie de página.
 
 ![App](src/img/app.png)
 
@@ -32,7 +32,7 @@ Puedes verlos todos avanzando por medio de los botones de página ubicados al pi
 
 #### Prototipo de alta fidelidad:
 El prototipo de alta fidelidad fue diseñado a través de la plataforma que ofrece Figma, dando énfasis en cómo luciría y el funcionamiento planeado.
-Se desarrolló la guía de estilos de los colores corporativos y tipografías de Houm.com
+Se desarrolló la guía de estilos de los colores corporativos y tipografías de Houm.com.
 ![Screen shot](src/img/guia.png)
 
 
