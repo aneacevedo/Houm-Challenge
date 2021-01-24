@@ -1,70 +1,59 @@
-# Getting Started with Create React App
+# POKÉDEX Houm
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Índice:
 
-## Available Scripts
+* [1. Pokédex HOUM.](#1-Pokédex-Houm)
+* [2. Comenzando a usarla.](#2-Comenzando-a-usarla)
+* [3. Proceso de protoripado.](#3-Proceso-de-protoripado)
+* [4. Despliegue.](#8-Despliegue)
+* [5. Herramientas.](#9-Herramientas)
+* [6. Autora.](#10-Autoras)
 
-In the project directory, you can run:
+***
 
-### `npm start`
+![Logo](src/img/houmLogo.png)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## 1. Pokédex Houm :speech_balloon:
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
 
-### `npm test`
+Houm me entregó del desafío de desarrollar una pokédex a gtravés del consumo de PokeApi.
+El proyecto muestra todos los pokémons alojados en la data de la Api con sus respectivas imágenes, nombres, tipo, peso, altura y habilidad.
+La Pokédex es repsonsiva.
+Puedes conocerla y probarla [aquí](https://aneacevedo.github.io/Houm-Challenge/).
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 2. Comenzando a usarla 🚀
 
-### `npm run build`
+Accede a Pokédex Houm por medio de tu navegador y se desplegarán en varias páginas los pokémons con sus fichas en HeroCards.
+Puedes verlos todos avanzando por medio de los botones de página ubicados al pie.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+![App](src/img/app.png)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 3. Proceso de prototipado 📋
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+#### Prototipo de alta fidelidad:
+El prototipo de alta fidelidad fue diseñado a través de la plataforma que ofrece Figma, dando énfasis en cómo luciría y el funcionamiento planeado.
+Se desarrolló la guía de estilos de los colores corporativos y tipografías de Houm.com
+![Screen shot](src/img/guia.png)
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## 4. Despliegue 📦
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Puedes acceder al deploy de mi proyecto [aquí](https://aneacevedo.github.io/Houm-Challenge/).
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## 5. Herramientas 🛠️
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+En éste proyecto fueron utilizadas herramientas y tecnologías para llegar al resultado del producto entregado.
+Las usadas fueron:
 
-## Learn More
+* [Visual Studio Code](https://code.visualstudio.com/) – Para el código.
+* [Figma](https://www.figma.com/) – Para el prototipado de alta fidelidad.
+* [React Js](https://reactjs.org/) - Librería usada para el proyecto.
+* [Node Js](https://nodejs.org/) – Instalaciones de packages.
+* [PokeApi](https://pokeapi.co/) – Consumo de ésta api para obtener la data.
+* [Git y GitHub](https://github.com/) – Para el Subir repositorio, commits y deploy.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## 6. Autora ✒️
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Éste proyecto fue realizado por mi a solicitud de Houm.
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+* **Anelisse Acevedo Sáez** [GitHub](https://github.com/aneacevedo) :octocat:
