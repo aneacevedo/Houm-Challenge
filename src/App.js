@@ -7,14 +7,8 @@ import Header from './Components/Header/Header';
 export const App = () => {
   return(
   <div className='App'>
-    <Router>
-  <Switch>
-    <Route exact path="/">
       <Header/>
       <Pokemon/>
-    </Route>
-  </Switch>
-  </Router>
   </div>
   );
 };
