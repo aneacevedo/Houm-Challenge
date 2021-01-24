@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Header from '../Components/Header/Header';
 import Card from '../Components/Cards/Card';
 import { getPokemon, getAllPokemon } from '../Functions/pokedex';
+import './Style.css';
 
 
 function PokeApp() {

@@ -4,19 +4,23 @@ import typeColors from '../Colors/typeColors'
 
 function Card({ pokemon }) {
     return (
-        <div className="Card">
+        <div className='BgPage'>
+        <div className='ContainerBg'>
+        <div className="CardBox">
             <div className="CardImg">
-                <img src={pokemon.sprites.front_default} alt="" />
+                <img src={pokemon.sprites.front_default} alt={pokemon.name} />
             </div>
         <div className="CardName">
+            <h2>
         {pokemon.name}
+        </h2>
         </div>
         <div className="CardTypes">
                 {
                 pokemon.types.map(type => {
                     return (
                          <div className="CardType" style={{ backgroundColor: typeColors[type.type.name] }}>
-                                {type.type.name}
+                                <p>{type.type.name}</p>
                             </div>
                     )
                         })
@@ -32,12 +36,14 @@ function Card({ pokemon }) {
                         <p>{pokemon.height}</p>
                     </div>
                     <div className="CardAbility">
-                        <p className="title">Habilidad</p>
-                        <p>{pokemon.abilities[0].ability.name}</p>
+                        <p className="title">Habilidad:</p>
+                        <p>"{pokemon.abilities[0].ability.name}"</p>
                     </div>
                 </div>
+            </div>
+            </div>
             </div>
         );
     }
     
-export default Card
+export default Card;
